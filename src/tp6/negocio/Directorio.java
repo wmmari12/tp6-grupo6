@@ -70,9 +70,24 @@ public class Directorio {
             String keyActual = it.next(); //guarda la llave dnd esta posicionado
             Cliente clienteActual = registro.get(keyActual);//guarda el cliente donde esta posicionado el it
             
-            if(clienteActual.getCiudad().equals(ciudad))
+            if(clienteActual.getCiudad().equals(ciudad)){
+                lista.add(clienteActual);
+            }
         }
+        return lista;
     }
     
     //borrarCliente() que en base al número de teléfono elimina al cliente del directorio.
-}
+     
+     public void borrarCliente(String telefono, Cliente c){
+        
+        if(registro.containsKey(telefono)){
+            
+            registro.remove(c);
+            
+        }else{
+            JOptionPane.showMessageDialog(null, "Cliente no existe");
+        }
+        
+    }
+}z
