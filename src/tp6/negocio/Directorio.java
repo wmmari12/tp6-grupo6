@@ -47,8 +47,6 @@ public class Directorio {
         
         for (Map.Entry<String, Cliente> entry : registro.entrySet())
         {
-            String key = entry.getKey();
-            Cliente value = entry.getValue();
             
         }
                 
