@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Win10/Desktop/ULP-Desarrollo%20De%20Software/2023/Laboratorio%201/TPO%206/tp6-grupo6/src/tp6/grupo6/Tp6Grupo6.java</file>
-            <file>file:/C:/Users/Win10/Desktop/ULP-Desarrollo%20De%20Software/2023/Laboratorio%201/TPO%206/tp6-grupo6/src/tp6/negocio/Directorio.java</file>
-            <file>file:/C:/Users/Win10/Desktop/ULP-Desarrollo%20De%20Software/2023/Laboratorio%201/TPO%206/tp6-grupo6/src/tp6/negocio/Cliente.java</file>
+            <file>file:/Users/solmedina/Documents/NetBeansProjects/tp6-grupo6/src/tp6/vistas/viewBuscarClientes.java</file>
+            <file>file:/Users/solmedina/Documents/NetBeansProjects/tp6-grupo6/src/tp6/negocio/Directorio.java</file>
+            <file>file:/Users/solmedina/Documents/NetBeansProjects/tp6-grupo6/src/tp6/vistas/menu.java</file>
+            <file>file:/Users/solmedina/Documents/NetBeansProjects/tp6-grupo6/src/tp6/vistas/viewBorrarClientes.java</file>
         </group>
     </open-files>
 </project-private>

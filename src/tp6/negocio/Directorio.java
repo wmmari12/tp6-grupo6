@@ -49,7 +49,7 @@ public class Directorio {
         
         for (Map.Entry<String, Cliente> entry : registro.entrySet())
         {
-<<<<<<< HEAD
+
 
             if(registro.containsValue(apellido)){
                 lista.add(entry.getKey());
@@ -74,9 +74,7 @@ public class Directorio {
             if(clienteActual.getCiudad().equals(ciudad)){
                 lista.add(clienteActual);
             }
-=======
-            
->>>>>>> 8e9ba61fc9bb651f5f04bec7e03a3b6631f478df
+
         }
         return lista;
     }
@@ -94,4 +92,4 @@ public class Directorio {
         }
         
     }
-}z
+}
