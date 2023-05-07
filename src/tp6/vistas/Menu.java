@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tp6.vistas;
 
 import tp6.negocio.Directorio;
 
-/**
- *
- * @author solmedina
- */
+
 public class Menu extends javax.swing.JFrame {
 public static Directorio miDirectorio=new Directorio();//para poder acceder desde todas las vistas
     /**
@@ -42,11 +35,11 @@ public static Directorio miDirectorio=new Directorio();//para poder acceder desd
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 479, Short.MAX_VALUE)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 435, Short.MAX_VALUE)
+            .addGap(0, 493, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Administracion");
