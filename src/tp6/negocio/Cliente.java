@@ -4,13 +4,13 @@ package tp6.negocio;
 
 public class Cliente {
     
-    private String dni;
+    private int dni;
     private String nombre;
     private String apellido;
     private String ciudad;
     private String direccion;
 
-    public Cliente(String dni, String nombre, String apellido, String ciudad, String direccion) {
+    public Cliente(int dni, String nombre, String apellido, String ciudad, String direccion) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -18,11 +18,11 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public String getDni() {
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 
