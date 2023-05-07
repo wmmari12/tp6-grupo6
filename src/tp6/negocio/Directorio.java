@@ -30,15 +30,15 @@ public class Directorio {
     
     public Cliente buscarCliente(String telefono) {
         
-        Cliente c=null;
-        
-        if(registro.containsKey(telefono)){
-            
-           c=registro.get(telefono);     
-        }else{
-            JOptionPane.showMessageDialog(null, "Cliente no registrado");
-        }
-        return c;
+//        Cliente c=null;
+//        
+//        if(registro.containsKey(telefono)){
+//            
+//           c=registro.get(telefono);     
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Cliente no registrado");
+//        }
+        return registro.get(telefono);
     }
     
 //    buscarTeléfono() que en base a un apellido nos devuelve una lista con los nros de

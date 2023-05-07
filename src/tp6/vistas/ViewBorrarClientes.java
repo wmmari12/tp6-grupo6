@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tp6.vistas;
 
-/**
- *
- * @author Win10
- */
+import javax.swing.JOptionPane;
+import tp6.negocio.Cliente;
+
+
 public class ViewBorrarClientes extends javax.swing.JInternalFrame {
 
     /**
@@ -30,18 +26,18 @@ public class ViewBorrarClientes extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jlTelefono = new javax.swing.JLabel();
         btnBuscarBorrar = new javax.swing.JButton();
-        jtfLectorTelefono = new javax.swing.JTextField();
+        jtTelefono = new javax.swing.JTextField();
         jlDni = new javax.swing.JLabel();
         jlApellido = new javax.swing.JLabel();
         jlNombre = new javax.swing.JLabel();
         jlCiudad = new javax.swing.JLabel();
         jlDireccion = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
-        jtfDni = new javax.swing.JTextField();
-        jtfApellido = new javax.swing.JTextField();
-        jtfNombre = new javax.swing.JTextField();
-        jtfCiudad = new javax.swing.JTextField();
-        jtfDireccion = new javax.swing.JTextField();
+        jtDni = new javax.swing.JTextField();
+        jtApellido = new javax.swing.JTextField();
+        jtNombre = new javax.swing.JTextField();
+        jtCiudad = new javax.swing.JTextField();
+        jtDireccion = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(51, 51, 51));
@@ -53,6 +49,11 @@ public class ViewBorrarClientes extends javax.swing.JInternalFrame {
         jlTelefono.setText("TELÉFONO:");
 
         btnBuscarBorrar.setText("BUSCAR Y BORRAR");
+        btnBuscarBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarBorrarActionPerformed(evt);
+            }
+        });
 
         jlDni.setText("DNI:");
 
@@ -65,10 +66,15 @@ public class ViewBorrarClientes extends javax.swing.JInternalFrame {
         jlDireccion.setText("DIRECCION:");
 
         btnSalir.setText("Salir");
-
-        jtfDni.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfDniActionPerformed(evt);
+                btnSalirActionPerformed(evt);
+            }
+        });
+
+        jtDni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtDniActionPerformed(evt);
             }
         });
 
@@ -76,80 +82,78 @@ public class ViewBorrarClientes extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlDireccion)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jlDni)
-                                .addComponent(jlApellido)
-                                .addComponent(jlNombre)
-                                .addComponent(jlCiudad))
-                            .addComponent(jlTelefono))
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtfDni)
-                            .addComponent(jtfApellido)
-                            .addComponent(jtfNombre)
-                            .addComponent(jtfCiudad)
-                            .addComponent(jtfDireccion))))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlTelefono)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jlDni)
+                                        .addComponent(jlApellido)
+                                        .addComponent(jlNombre)
+                                        .addComponent(jlCiudad))
+                                    .addComponent(jlDireccion))
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtDireccion)
+                                    .addComponent(jtDni)
+                                    .addComponent(jtApellido)
+                                    .addComponent(jtNombre)
+                                    .addComponent(jtCiudad)))))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(283, 283, 283)
                         .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jtfLectorTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBuscarBorrar))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(248, 248, 248)
                         .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(164, 164, 164))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnBuscarBorrar)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlTelefono)
+                    .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscarBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addGap(45, 45, 45)
+                        .addComponent(jlDni)
+                        .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlTelefono)
-                            .addComponent(jtfLectorTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(btnBuscarBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlDni)
-                    .addComponent(jtfDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlApellido)
-                    .addComponent(jtfApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlNombre)
-                    .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlCiudad)
-                    .addComponent(jtfCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jlApellido)
+                            .addComponent(jtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlNombre)
+                            .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlCiudad)
+                            .addComponent(jtCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlDireccion)
-                    .addComponent(jtfDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -158,11 +162,48 @@ public class ViewBorrarClientes extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtfDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDniActionPerformed
+    private void jtDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtDniActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfDniActionPerformed
+    }//GEN-LAST:event_jtDniActionPerformed
 
+    private void btnBuscarBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarBorrarActionPerformed
+        // TODO add your handling code here: boton busca y borra cliente
+        
+        String  telefono=jtTelefono.getText();
+        Cliente c=Menu.miDirectorio.buscarCliente(telefono);
+        
+        if(c!=null){//muestra primero los datos a borrar y lo borra
+            
+            jtNombre.setText(c.getNombre());
+            jtApellido.setText(c.getApellido());
+            jtDni.setText(c.getDni()+"");//esto convierte el int en un String o 
+            jtDireccion.setText(c.getDireccion());
+            jtCiudad.setText(c.getCiudad());
+            
+            Menu.miDirectorio.borrarCliente(telefono, c);//borra el cliente
+            JOptionPane.showMessageDialog(this,"Cliente Borrado");
+            limpiar();
+            
+        }else{
+            JOptionPane.showMessageDialog(this,"Cliente no encontrado");
+        }
+        
+    }//GEN-LAST:event_btnBuscarBorrarActionPerformed
 
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here: salir de la ventana borrar
+        
+        dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    public void limpiar() {
+        jtDni.setText("");
+        jtApellido.setText("");
+        jtNombre.setText("");
+        jtDireccion.setText("");
+        jtCiudad.setText("");
+        jtTelefono.setText("");
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuscarBorrar;
     private javax.swing.JButton btnSalir;
@@ -174,11 +215,11 @@ public class ViewBorrarClientes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jlDni;
     private javax.swing.JLabel jlNombre;
     private javax.swing.JLabel jlTelefono;
-    private javax.swing.JTextField jtfApellido;
-    private javax.swing.JTextField jtfCiudad;
-    private javax.swing.JTextField jtfDireccion;
-    private javax.swing.JTextField jtfDni;
-    private javax.swing.JTextField jtfLectorTelefono;
-    private javax.swing.JTextField jtfNombre;
+    private javax.swing.JTextField jtApellido;
+    private javax.swing.JTextField jtCiudad;
+    private javax.swing.JTextField jtDireccion;
+    private javax.swing.JTextField jtDni;
+    private javax.swing.JTextField jtNombre;
+    private javax.swing.JTextField jtTelefono;
     // End of variables declaration//GEN-END:variables
 }

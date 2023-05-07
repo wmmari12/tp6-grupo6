@@ -24,101 +24,97 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jSeparator1" min="-2" pref="576" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jlDireccion" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="jlDni" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlApellido" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlNombre" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlCiudad" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jlTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jtfDni" max="32767" attributes="0"/>
-                          <Component id="jtfApellido" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jtfNombre" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jtfCiudad" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jtfDireccion" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jSeparator1" min="-2" pref="576" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jlTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Component id="jlDni" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlApellido" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlNombre" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlCiudad" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jlDireccion" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jtDireccion" max="32767" attributes="0"/>
+                                  <Component id="jtDni" max="32767" attributes="0"/>
+                                  <Component id="jtApellido" max="32767" attributes="0"/>
+                                  <Component id="jtNombre" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jtCiudad" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="283" max="-2" attributes="0"/>
                       <Component id="btnSalir" min="-2" pref="95" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                      <Component id="jtfLectorTelefono" min="-2" pref="357" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnBuscarBorrar" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="248" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="16" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+              <Component id="jtTelefono" min="-2" pref="357" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnBuscarBorrar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBuscarBorrar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
+              <Component id="jSeparator1" min="-2" pref="15" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jlDni" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jlTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfLectorTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jlNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jlCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Component id="btnBuscarBorrar" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="29" max="32767" attributes="0"/>
-              <Component id="jSeparator1" min="-2" pref="15" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlDni" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtfDni" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlApellido" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtfApellido" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlNombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtfNombre" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtfCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtDni" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtfDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnSalir" min="-2" pref="50" max="-2" attributes="0"/>
@@ -148,8 +144,11 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="BUSCAR Y BORRAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarBorrarActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jtfLectorTelefono">
+    <Component class="javax.swing.JTextField" name="jtTelefono">
     </Component>
     <Component class="javax.swing.JLabel" name="jlDni">
       <Properties>
@@ -180,19 +179,22 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Salir"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jtfDni">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfDniActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jtfApellido">
+    <Component class="javax.swing.JTextField" name="jtDni">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtDniActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jtfNombre">
+    <Component class="javax.swing.JTextField" name="jtApellido">
     </Component>
-    <Component class="javax.swing.JTextField" name="jtfCiudad">
+    <Component class="javax.swing.JTextField" name="jtNombre">
     </Component>
-    <Component class="javax.swing.JTextField" name="jtfDireccion">
+    <Component class="javax.swing.JTextField" name="jtCiudad">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtDireccion">
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>

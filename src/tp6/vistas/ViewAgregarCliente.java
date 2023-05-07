@@ -8,10 +8,7 @@ package tp6.vistas;
 import javax.swing.JOptionPane;
 import tp6.negocio.Cliente;
 
-/**
- *
- * @author solmedina
- */
+
 public class ViewAgregarCliente extends javax.swing.JInternalFrame {
 
     /**

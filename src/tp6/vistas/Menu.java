@@ -38,6 +38,17 @@ public static Directorio miDirectorio=new Directorio();//para poder acceder desd
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
+        escritorio.setLayout(escritorioLayout);
+        escritorioLayout.setHorizontalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 479, Short.MAX_VALUE)
+        );
+        escritorioLayout.setVerticalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 435, Short.MAX_VALUE)
+        );
+
         jMenu1.setText("Administracion");
 
         jMenuItem1.setText("Agregar cliente");
@@ -69,6 +80,11 @@ public static Directorio miDirectorio=new Directorio();//para poder acceder desd
         jMenu2.setText("Salir");
 
         jMenuItem4.setText("Salir del sistema");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
@@ -90,7 +106,13 @@ public static Directorio miDirectorio=new Directorio();//para poder acceder desd
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: ventana borrar cliente
+        escritorio.removeAll();//remover todo
+        escritorio.repaint();
+        ViewBorrarClientes vbbc=new ViewBorrarClientes();//crer nueva ventana
+        vbbc.setVisible(true);//hacerla visible
+        escritorio.add(vbbc);//agregarla al escritorio
+        escritorio.moveToFront(vbbc);//llevarla al frente
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -113,6 +135,12 @@ public static Directorio miDirectorio=new Directorio();//para poder acceder desd
         escritorio.add(vbc);
         escritorio.moveToFront(vbc);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here: salir del sistema
+        
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
